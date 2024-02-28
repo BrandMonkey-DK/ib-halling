@@ -3,15 +3,21 @@
 footer {
   border-top: 1px solid $color-light-grey;
 
-  .logo {
+  .contact-info {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
 
     > a {
       text-decoration: none;
       color: $dark-font-color;
-      text-transform: uppercase;
+      opacity: 0.85;
+      @include fontSize(2rem);
+      margin-bottom: 6px;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
 
       > img {
         height: 30px;
@@ -25,11 +31,14 @@ footer {
 
   .navigation {
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    align-items: end;
+    justify-content: end;
 
     .nav-menu {
-      padding: $padding-extra-small $padding-none;
+      span {
+        opacity: .5;
+        @include fontSize(2rem);
+      }
 
       // -------------------------- All MENU LEVELS --------------------------
       ul {
@@ -42,7 +51,6 @@ footer {
           padding-left: $padding-mini;
 
           a {
-            font-size: 14px;
             color: $dark-font-color;
             text-decoration: none;
           }

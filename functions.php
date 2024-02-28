@@ -269,6 +269,7 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
   function bm_register_block_types() {
     register_block_type( __DIR__ . '/blocks/section' );
     register_block_type( __DIR__ . '/blocks/section-flexible' );
+    register_block_type( __DIR__ . '/blocks/header' );
   }
   add_action('init', 'bm_register_block_types');
 
@@ -280,6 +281,7 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
       return array(
         'acf/section',
         'acf/section-flexible',
+        'acf/header'
       );
     }
     return $block_editor_context;

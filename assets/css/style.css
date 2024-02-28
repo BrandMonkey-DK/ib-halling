@@ -2781,6 +2781,7 @@ body {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.5;
+  color: #404040;
 }
 
 h1 {
@@ -3019,32 +3020,83 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   }
 }
 
+.header .container {
+  display: flex;
+  justify-content: center;
+}
+.header .container .row {
+  max-width: 1184px;
+  display: flex;
+  align-items: center;
+}
+.header .container .row .left {
+  position: relative;
+}
+.header .container .row .left::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.header .container .row .right {
+  position: relative;
+}
+.header .container .row .right::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.header .container .row .header-title {
+  font-weight: bold;
+  color: white;
+  font-size: 36px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 380px;
+  line-height: 1.2;
+  text-align: center;
+}
+
 footer {
   border-top: 1px solid rgb(235, 235, 235);
 }
-footer .logo {
+footer .contact-info {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
 }
-footer .logo > a {
+footer .contact-info > a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  text-transform: uppercase;
+  opacity: 0.85;
+  font-size: 1.25rem;
+  margin-bottom: 6px;
 }
-footer .logo > a > img {
+footer .contact-info > a:last-of-type {
+  margin-bottom: 0;
+}
+footer .contact-info > a > img {
   height: 30px;
 }
-footer .logo > a > .site-name {
+footer .contact-info > a > .site-name {
   font-size: 1.25rem;
 }
 footer .navigation {
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: end;
+  justify-content: end;
 }
-footer .navigation .nav-menu {
-  padding: 15px 0;
+footer .navigation .nav-menu span {
+  opacity: 0.5;
+  font-size: 1.25rem;
 }
 footer .navigation .nav-menu ul {
   list-style: none;
@@ -3056,7 +3108,6 @@ footer .navigation .nav-menu ul li {
   padding-left: 10px;
 }
 footer .navigation .nav-menu ul li a {
-  font-size: 14px;
   color: rgb(0, 0, 0);
   text-decoration: none;
 }

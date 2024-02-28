@@ -1,0 +1,20 @@
+{
+  "name": "acf/header",
+  "title": "Header",
+  "description": "Header.",
+  "category": "widget",
+  "icon": "slides",
+  "keywords": [ "header" ],
+  "supports": {
+      "align": false,
+      "color": {
+          "background": false,
+          "text": false
+      }
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "header.php"
+  },
+  "textdomain": "brandmonkey-base-theme"
+}

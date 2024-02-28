@@ -1,0 +1,20 @@
+{
+  "name": "acf/section-flexible",
+  "title": "Flexible - Section",
+  "description": "These type of sections are defined under Flexible sections and can be included on various pages.",
+  "category": "widget",
+  "icon": "columns",
+  "keywords": [ "section" ],
+  "supports": {
+      "align": false,
+      "color": {
+          "background": false,
+          "text": false
+      }
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "section.php"
+  },
+  "textdomain": "brandmonkey-base-theme"
+}

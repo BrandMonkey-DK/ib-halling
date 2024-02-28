@@ -1,0 +1,20 @@
+{
+  "name": "acf/section",
+  "title": "Section",
+  "description": "Section.",
+  "category": "widget",
+  "icon": "columns",
+  "keywords": [ "section" ],
+  "supports": {
+      "align": false,
+      "color": {
+          "background": false,
+          "text": false
+      }
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "section.php"
+  },
+  "textdomain": "brandmonkey-base-theme"
+}
