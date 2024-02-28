@@ -1,0 +1,116 @@
+// ############################################################################ PADDINGS ############################################################################ 
+
+$placements: "top", "bottom", "left", "right", "x", "y";
+
+$sizes: "mini" $padding-mini, "extra-small" $padding-extra-small,
+  "small" $padding-small, "regular" $padding-regular, "medium" $padding-medium,
+  "large" $padding-large, "extra-large" $padding-extra-large,
+  "supreme" $padding-supreme, "none" $padding-none, "default" $padding-default;
+
+@each $size, $padding in $sizes {
+  .all-p-#{$size} {
+    padding: $padding;
+  }
+
+  @each $placement in $placements {
+    .all-p-#{$placement}-#{$size} {
+      @if $placement== "y" {
+        padding-top: $padding;
+        padding-bottom: $padding;
+      } @else if $placement== "x" {
+        padding-right: $padding;
+        padding-left: $padding;
+      } @else {
+        padding-#{$placement}: $padding;
+      }
+    }
+  }
+}
+
+@include breakpoint(xl) {
+  @each $size, $padding in $sizes {
+    .xl-p-#{$size} {
+      padding: $padding;
+    }
+  
+    @each $placement in $placements {
+      .xl-p-#{$placement}-#{$size} {
+        @if $placement== "y" {
+          padding-top: $padding;
+          padding-bottom: $padding;
+        } @else if $placement== "x" {
+          padding-right: $padding;
+          padding-left: $padding;
+        } @else {
+          padding-#{$placement}: $padding;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(lg) {
+  @each $size, $padding in $sizes {
+    .lg-p-#{$size} {
+      padding: $padding;
+    }
+  
+    @each $placement in $placements {
+      .lg-p-#{$placement}-#{$size} {
+        @if $placement== "y" {
+          padding-top: $padding;
+          padding-bottom: $padding;
+        } @else if $placement== "x" {
+          padding-right: $padding;
+          padding-left: $padding;
+        } @else {
+          padding-#{$placement}: $padding;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(md) {
+  @each $size, $padding in $sizes {
+    .md-p-#{$size} {
+      padding: $padding;
+    }
+  
+    @each $placement in $placements {
+      .md-p-#{$placement}-#{$size} {
+        @if $placement== "y" {
+          padding-top: $padding;
+          padding-bottom: $padding;
+        } @else if $placement== "x" {
+          padding-right: $padding;
+          padding-left: $padding;
+        } @else {
+          padding-#{$placement}: $padding;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint(sm) {
+  @each $size, $padding in $sizes {
+    .sm-p-#{$size} {
+      padding: $padding;
+    }
+  
+    @each $placement in $placements {
+      .sm-p-#{$placement}-#{$size} {
+        @if $placement== "y" {
+          padding-top: $padding;
+          padding-bottom: $padding;
+        } @else if $placement== "x" {
+          padding-right: $padding;
+          padding-left: $padding;
+        } @else {
+          padding-#{$placement}: $padding;
+        }
+      }
+    }
+  }
+}

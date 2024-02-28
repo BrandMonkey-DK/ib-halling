@@ -1,0 +1,28 @@
+// ############################################################################ MARGINS ############################################################################ 
+
+$placements: "top", "bottom", "left", "right", "x", "y";
+
+$sizes: "mini" $margin-mini, "extra small" $margin-extra-small,
+  "small" $margin-small, "regular" $margin-regular, "medium" $margin-medium,
+  "large" $margin-large, "extra-large" $margin-extra-large,
+  "supreme" $margin-supreme, "none" $margin-none;
+
+@each $size, $margin in $sizes {
+  .margin-#{$size} {
+    margin: $margin;
+  }
+
+  @each $placement in $placements {
+    .margin-#{$placement}-#{$size} {
+      @if $placement== "y" {
+        margin-top: $margin;
+        margin-bottom: $margin;
+      } @else if $placement== "x" {
+        margin-right: $margin;
+        margin-left: $margin;
+      } @else {
+        margin-#{$placement}: $margin;
+      }
+    }
+  }
+}

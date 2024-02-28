@@ -1,0 +1,1036 @@
+[
+    {
+        "key": "group_63a18cbb39a8c",
+        "title": "template-parts\/sections\/example.php",
+        "fields": [
+            {
+                "key": "field_63a18cbb3e1b0",
+                "label": "EXAMPLE",
+                "name": "",
+                "aria-label": "",
+                "type": "accordion",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "open": 1,
+                "multi_expand": 1,
+                "endpoint": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63a18cbb41b5d",
+                "label": "Content",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63a18cbb4912f",
+                "label": "Settings",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63a18cbb4cac8",
+                "label": "(Column 12\/12)",
+                "name": "",
+                "aria-label": "",
+                "type": "acfe_column",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "columns": "12\/12",
+                "endpoint": 0,
+                "border": "",
+                "acfe_field_group_condition": 0,
+                "border_endpoint": [
+                    "endpoint"
+                ]
+            },
+            {
+                "key": "field_63a18cbb66c6c",
+                "label": "Background",
+                "name": "section_background",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "bg-none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-none.svg",
+                    "bg-image": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-image.svg",
+                    "bg-color-black": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-black.svg",
+                    "bg-color-dark": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-dark.svg",
+                    "bg-color-white": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-white.svg",
+                    "bg-color-light-grey": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-grey.svg",
+                    "bg-color-red": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-red.svg",
+                    "bg-color-blue": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_SITE_NAME_HERE\/ACF-block-settings\/backgrounds\/bg-color-blue.svg"
+                },
+                "default_value": "bg-none",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63a18cbb6a77e",
+                "label": "Background image",
+                "name": "section_background_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63a18cbb66c6c",
+                            "operator": "==",
+                            "value": "bg-image"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "required_message": "Background image is required",
+                "uploader": "",
+                "acfe_thumbnail": 0,
+                "return_format": "array",
+                "preview_size": "medium",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "",
+                "acfe_field_group_condition": 0,
+                "library": "all"
+            },
+            {
+                "key": "field_63b69497a5a2a",
+                "label": "Paddings",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63a18cbb5070a",
+                "label": "Paddings",
+                "name": "section_paddings_all",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-none.svg",
+                    "various": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-various.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63a18cbb57bae",
+                "label": "Top",
+                "name": "section_padding_top_all",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63a18cbb5070a",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63a18cbb5f243",
+                "label": "Bottom",
+                "name": "section_padding_bottom_all",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63a18cbb5070a",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b694a9a5a2b",
+                "label": "Desktop ( < 1200px )",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63b694b2a5a2c",
+                "label": "Paddings Desktop",
+                "name": "section_paddings_xl",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-none.svg",
+                    "inherit": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-inherit.svg",
+                    "various": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-various.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b694c9a5a2d",
+                "label": "Top",
+                "name": "section_padding_top_xl",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b694b2a5a2c",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b694dfa5a2e",
+                "label": "Bottom",
+                "name": "section_padding_bottom_xl",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b694b2a5a2c",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b694eda5a2f",
+                "label": "Laptop ( < 992px )",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63b694faa5a30",
+                "label": "Paddings Laptop",
+                "name": "section_paddings_lg",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-none.svg",
+                    "inherit": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-inherit.svg",
+                    "various": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-various.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69516a5a31",
+                "label": "Top",
+                "name": "section_padding_top_lg",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b694faa5a30",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69520a5a32",
+                "label": "Bottom",
+                "name": "section_padding_bottom_lg",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b694faa5a30",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69540a5a33",
+                "label": "Tablet ( < 768px )",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63b69549a5a34",
+                "label": "Paddings Tablet",
+                "name": "section_paddings_md",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-none.svg",
+                    "inherit": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-inherit.svg",
+                    "various": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-various.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69550a5a35",
+                "label": "Top",
+                "name": "section_padding_top_md",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b69549a5a34",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69557a5a36",
+                "label": "Bottom",
+                "name": "section_padding_bottom_md",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b69549a5a34",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69587a5a37",
+                "label": "Mobile ( > 576px )",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0,
+                "no_preference": 0,
+                "acfe_field_group_condition": 0
+            },
+            {
+                "key": "field_63b6958ea5a38",
+                "label": "Paddings Mobile",
+                "name": "section_paddings_sm",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-none.svg",
+                    "inherit": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-inherit.svg",
+                    "various": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-various.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-y-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b69598a5a39",
+                "label": "Top",
+                "name": "section_padding_top_sm",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b6958ea5a38",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-top-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b695a7a5a3b",
+                "label": "Bottom",
+                "name": "section_padding_bottom_sm",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_63b6958ea5a38",
+                            "operator": "==",
+                            "value": "various"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "none": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-none.svg",
+                    "small": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-small.svg",
+                    "medium": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-medium.svg",
+                    "large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-large.svg",
+                    "extra-large": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/paddings\/padding-bottom-extra-large.svg"
+                },
+                "default_value": "large",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63b6946aa5a29",
+                "label": "(Column Endpoint)",
+                "name": "",
+                "aria-label": "",
+                "type": "acfe_column",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "endpoint": 1,
+                "border_endpoint": [
+                    "endpoint"
+                ],
+                "acfe_field_group_condition": 0,
+                "columns": "6\/12",
+                "border": ""
+            },
+            {
+                "key": "field_63a18cbb6e02b",
+                "label": "(Column 6\/12)",
+                "name": "",
+                "aria-label": "",
+                "type": "acfe_column",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "columns": "6\/12",
+                "endpoint": 0,
+                "border": [
+                    "column",
+                    "fields"
+                ],
+                "acfe_field_group_condition": 0,
+                "border_endpoint": [
+                    "endpoint"
+                ]
+            },
+            {
+                "key": "field_63a18cbb71aa1",
+                "label": "Vertical alignment",
+                "name": "vertical_alignment",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "Vertical alignment of the section blocks.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "default": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/vertical-align-top.svg",
+                    "align-items-center": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/vertical-align-center.svg",
+                    "align-items-end": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/vertical-align-bottom.svg"
+                },
+                "default_value": "default",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63a18cbb7558c",
+                "label": "(Column 6\/12)",
+                "name": "",
+                "aria-label": "",
+                "type": "acfe_column",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "columns": "6\/12",
+                "endpoint": 0,
+                "border": [
+                    "column",
+                    "fields"
+                ],
+                "acfe_field_group_condition": 0,
+                "border_endpoint": [
+                    "endpoint"
+                ]
+            },
+            {
+                "key": "field_63a18cbb7914b",
+                "label": "Horizontal alignment",
+                "name": "horizontal_alignment",
+                "aria-label": "",
+                "type": "acfe_image_selector",
+                "instructions": "Alignment of all blocks in the section.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "default": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/horizontal-align-left.svg",
+                    "justify-content-center": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/horizontal-align-center.svg",
+                    "justify-content-end": "http:\/\/localhost\/INSERT_SITE_NAME_HERE\/wp-content\/themes\/INSERT_THEME_NAME_HERE\/ACF-block-settings\/alignments\/horizontal-align-right.svg"
+                },
+                "default_value": "default",
+                "image_size": "acf-e-field-image-selector",
+                "width": "",
+                "height": "",
+                "border": 4,
+                "return_format": "value",
+                "allow_null": 0,
+                "multiple": 0,
+                "max": "",
+                "layout": "horizontal",
+                "acfe_field_group_condition": 0,
+                "min": ""
+            },
+            {
+                "key": "field_63a460d4dcd10",
+                "label": "(Column Endpoint)",
+                "name": "",
+                "aria-label": "",
+                "type": "acfe_column",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "endpoint": 1,
+                "border_endpoint": [
+                    "endpoint"
+                ],
+                "acfe_field_group_condition": 0,
+                "columns": "6\/12",
+                "border": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/example-section"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "acfe_autosync": "",
+        "acfe_form": 0,
+        "acfe_display_title": "",
+        "acfe_meta": "",
+        "acfe_note": ""
+    }
+]

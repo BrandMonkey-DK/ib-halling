@@ -1,0 +1,188 @@
+// ############################################################################ FONTS ############################################################################ 
+
+// -------------------------- FONTS IMPORT --------------------------
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+// -------------------------- FONTS WEIGHTS -------------------------- 
+
+// $font-weight-thin: 100;
+// $font-weight-extra-light: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 800;
+// $font-weight-black: 900;
+
+// -------------------------- FONTS SIZES -------------------------- 
+
+$font-size-humongous: 6rem;
+$font-size-extra-supreme: 5.5rem;
+$font-size-supreme: 4rem;
+$font-size-extra-large: 3rem;
+$font-size-large: 2.6rem;
+$font-size-medium: 2rem;
+$font-size-regular: 1.6rem;
+$font-size-small: 1.4rem;
+$font-size-extra-small: 1.3rem;
+$font-size-mini: 1rem;
+
+// ############################################################################ SPACINGS ############################################################################ 
+
+// -------------------------- PADDINGS -------------------------- 
+
+$padding-supreme: 12rem;
+$padding-extra-large: 10rem;
+$padding-large: 8rem;
+$padding-medium: 4rem;
+$padding-regular: 3rem;
+$padding-small: 2rem;
+$padding-extra-small: 1.5rem;
+$padding-mini: 1rem;
+$padding-none: 0;
+$padding-default: calc(var(--bs-gutter-x) * .5);
+
+// -------------------------- MARGINS -------------------------- 
+
+$margin-supreme: 12rem;
+$margin-extra-large: 10rem;
+$margin-large: 8rem;
+$margin-medium: 4rem;
+$margin-regular: 3rem;
+$margin-small: 2rem;
+$margin-extra-small: 1.5rem;
+$margin-mini: 1rem;
+$margin-none: 0;
+
+// ############################################################################ COLORS ############################################################################ 
+
+// -------------------------- SET COLOR OPACITIES -------------------------- 
+
+$high-color-opacity: 0.3;
+$medium-color-opacity: 0.6;
+$low-color-opacity: 0.9;
+
+// -------------------------- SET COLORS -------------------------- 
+
+// WHITE
+$color-white-map: (
+  "name": "white",
+  "value": rgb(255, 255, 255),
+  "text": "dark",
+);
+$color-white: map-get($color-white-map, "value");
+$color-white-high-opacity: rgba($color-white, $high-color-opacity);
+$color-white-medium-opacity: rgba($color-white, $medium-color-opacity);
+$color-white-low-opacity: rgba($color-white, $low-color-opacity);
+
+// BLACK
+$color-black-map: (
+  "name": "black",
+  "value": rgb(0, 0, 0),
+  "text": "light",
+);
+$color-black: map-get($color-black-map, "value");
+$color-black-high-opacity: rgba($color-black, $high-color-opacity);
+$color-black-medium-opacity: rgba($color-black, $medium-color-opacity);
+$color-black-low-opacity: rgba($color-black, $low-color-opacity);
+
+// DARK
+$color-dark-map: (
+  "name": "dark",
+  "value": rgb(35, 35, 35),
+  "text": "light",
+);
+$color-dark: map-get($color-dark-map, "value");
+$color-dark-high-opacity: rgba($color-dark, $high-color-opacity);
+$color-dark-medium-opacity: rgba($color-dark, $medium-color-opacity);
+$color-dark-low-opacity: rgba($color-dark, $low-color-opacity);
+
+// DARK GREY
+$color-dark-grey-map: (
+  "name": "dark-grey",
+  "value": rgb(142, 142, 142),
+  "text": "dark",
+);
+$color-dark-grey: map-get($color-dark-grey-map, "value");
+$color-dark-grey-high-opacity: rgba($color-dark-grey, $high-color-opacity);
+$color-dark-grey-medium-opacity: rgba($color-dark-grey, $medium-color-opacity);
+$color-dark-grey-low-opacity: rgba($color-dark-grey, $low-color-opacity);
+
+// GREY
+$color-grey-map: (
+  "name": "grey",
+  "value": rgb(215, 215, 215),
+  "text": "dark",
+);
+$color-grey: map-get($color-grey-map, "value");
+$color-grey-high-opacity: rgba($color-grey, $high-color-opacity);
+$color-grey-medium-opacity: rgba($color-grey, $medium-color-opacity);
+$color-grey-low-opacity: rgba($color-grey, $low-color-opacity);
+
+// LIGHT GREY
+$color-light-grey-map: (
+  "name": "light-grey",
+  "value": rgb(235, 235, 235),
+  "text": "dark",
+);
+$color-light-grey: map-get($color-light-grey-map, "value");
+$color-light-grey-high-opacity: rgba($color-light-grey, $high-color-opacity);
+$color-light-grey-medium-opacity: rgba(
+  $color-light-grey,
+  $medium-color-opacity
+);
+$color-light-grey-low-opacity: rgba($color-light-grey, $low-color-opacity);
+
+// RED
+$color-red-map: (
+  "name": "red",
+  "value": rgb(255, 0, 0),
+  "text": "dark",
+);
+$color-red: map-get($color-red-map, "value");
+$color-red-high-opacity: rgba($color-red, $high-color-opacity);
+$color-red-medium-opacity: rgba($color-red, $medium-color-opacity);
+$color-red-low-opacity: rgba($color-red, $low-color-opacity);
+
+// GREEN
+$color-green-map: (
+  "name": "green",
+  "value": rgb(0, 255, 0),
+  "text": "dark",
+);
+$color-green: map-get($color-green-map, "value");
+$color-green-high-opacity: rgba($color-green, $high-color-opacity);
+$color-green-medium-opacity: rgba($color-green, $medium-color-opacity);
+$color-green-low-opacity: rgba($color-green, $low-color-opacity);
+
+// BLUE
+$color-blue-map: (
+  "name": "blue",
+  "value": rgb(0, 0, 255),
+  "text": "light",
+);
+$color-blue: map-get($color-blue-map, "value");
+$color-blue-high-opacity: rgba($color-blue, $high-color-opacity);
+$color-blue-medium-opacity: rgba($color-blue, $medium-color-opacity);
+$color-blue-low-opacity: rgba($color-blue, $low-color-opacity);
+
+// -------------------------- SET FONT COLORS -------------------------- 
+
+$light-font-color: $color-white;
+$dark-font-color: $color-black;
+
+// -------------------------- SET THEME COLORS -------------------------- 
+
+$theme-colors: (
+  $color-white-map,
+  $color-black-map,
+  $color-dark-map,
+  $color-dark-grey-map,
+  $color-grey-map,
+  $color-light-grey-map,
+  $color-red-map,
+  $color-green-map,
+  $color-blue-map
+);

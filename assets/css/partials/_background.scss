@@ -1,0 +1,46 @@
+// ############################################################################ BACKGROUND ############################################################################
+
+// -------------------------- SET BACKGROUND CLASSES --------------------------
+
+@each $color in $theme-colors {
+  // Get color values
+  $color-name: map-get($color, "name");
+  $color-value: map-get($color, "value");
+  $color-text: map-get($color, "text");
+
+  .bg-color-#{$color-name} {
+    background-color: $color-value;
+
+    div,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    p {
+      @if $color-text == "dark" {
+        color: $dark-font-color;
+      } @else {
+        color: $light-font-color;
+      }
+    }
+
+    &.high-opacity {
+      background-color: rgba($color-value, $high-color-opacity);
+    }
+
+    &.medium-opacity {
+      background-color: rgba($color-value, $medium-color-opacity);
+    }
+
+    &.low-opacity {
+      background-color: rgba($color-value, $low-color-opacity);
+    }
+  }
+}
+
+.bg-image {
+  background-repeat: no-repeat;
+  background-size: cover;
+}

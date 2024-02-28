@@ -1,0 +1,58 @@
+// ############################################################################ FOOTER ############################################################################
+
+footer {
+  border-top: 1px solid $color-light-grey;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    > a {
+      text-decoration: none;
+      color: $dark-font-color;
+      text-transform: uppercase;
+
+      > img {
+        height: 3rem;
+      }
+
+      > .site-name {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .nav-menu {
+      padding: $padding-extra-small $padding-none;
+
+      // -------------------------- All MENU LEVELS --------------------------
+      ul {
+        list-style: none;
+        display: block;
+        text-align: right;
+
+        li {
+          display: inline-block;
+          padding-left: $padding-mini;
+
+          a {
+            font-size: 14px;
+            color: $dark-font-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+      // -------------------------- MENU LEVEL 2 OR MORE --------------------------
+      > ul > li ul.sub-menu {
+        display: none;
+      }
+    }
+  }
+}

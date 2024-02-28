@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="114" viewBox="0 0 114 114">
+  <g id="horizontal-align-left" transform="translate(-648 -930)">
+    <rect id="box" width="114" height="114" transform="translate(648 930)" fill="#fff"/>
+    <g id="icon" transform="translate(0 -13)">
+      <rect id="Rectangle_72" data-name="Rectangle 72" width="2" height="64" transform="translate(678 955)" fill="#2271b1"/>
+      <g id="Rectangle_70" data-name="Rectangle 70" transform="translate(684 963)" fill="none" stroke="#2271b1" stroke-width="4">
+        <rect width="48" height="20" rx="6" stroke="none"/>
+        <rect x="2" y="2" width="44" height="16" rx="4" fill="none"/>
+      </g>
+      <g id="Rectangle_71" data-name="Rectangle 71" transform="translate(684 991)" fill="none" stroke="#2271b1" stroke-width="4">
+        <rect width="32" height="20" rx="6" stroke="none"/>
+        <rect x="2" y="2" width="28" height="16" rx="4" fill="none"/>
+      </g>
+    </g>
+    <path id="_4_12" data-name="4/12" d="M-19.5-13.146a1.5,1.5,0,0,0-1.533-1.428,1.554,1.554,0,0,0-1.533,1.428V-1.3A1.2,1.2,0,0,0-21.347,0h6.027a1.369,1.369,0,0,0,1.26-1.344,1.311,1.311,0,0,0-1.26-1.344H-19.5Zm9.618-1.323a1.214,1.214,0,0,0-1.218,1.3V-1.3A1.214,1.214,0,0,0-9.881,0h6.867a1.354,1.354,0,0,0,1.26-1.344,1.311,1.311,0,0,0-1.26-1.344H-8.033V-5.8h4.179a1.334,1.334,0,0,0,1.26-1.323,1.292,1.292,0,0,0-1.26-1.323H-8.033V-11.76H-3.2A1.354,1.354,0,0,0-1.943-13.1,1.316,1.316,0,0,0-3.2-14.469Zm12.894,0a1.214,1.214,0,0,0-1.218,1.3V-1.323A1.539,1.539,0,0,0,3.328.105,1.5,1.5,0,0,0,4.861-1.323V-5.8h3.57a1.334,1.334,0,0,0,1.26-1.323,1.292,1.292,0,0,0-1.26-1.323H4.861V-11.76H9.67a1.369,1.369,0,0,0,1.26-1.344,1.316,1.316,0,0,0-1.26-1.365ZM22.648-11.76a1.37,1.37,0,0,0,1.26-1.344,1.316,1.316,0,0,0-1.26-1.365h-8.61a1.316,1.316,0,0,0-1.26,1.365,1.37,1.37,0,0,0,1.26,1.344H16.81V-1.323A1.539,1.539,0,0,0,18.343.105a1.5,1.5,0,0,0,1.533-1.428V-11.76Z" transform="translate(705 1032)" fill="#444"/>
+  </g>
+</svg>
