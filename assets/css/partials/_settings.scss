@@ -18,42 +18,42 @@ $font-weight-extra-bold: 800;
 
 // -------------------------- FONTS SIZES -------------------------- 
 
-$font-size-humongous: 6rem;
-$font-size-extra-supreme: 5.5rem;
-$font-size-supreme: 4rem;
-$font-size-extra-large: 3rem;
-$font-size-large: 2.6rem;
-$font-size-medium: 2rem;
-$font-size-regular: 1.6rem;
-$font-size-small: 1.4rem;
-$font-size-extra-small: 1.3rem;
-$font-size-mini: 1rem;
+$font-size-humongous: calc(6rem * 0.625);
+$font-size-extra-supreme: calc(5.5rem * 0.625);
+$font-size-supreme: calc(4rem * 0.625);
+$font-size-extra-large: calc(3rem * 0.625);
+$font-size-large: calc(2.6rem * 0.625);
+$font-size-medium: calc(2rem * 0.625);
+$font-size-regular: calc(1.6rem * 0.625);
+$font-size-small: calc(1.4rem * 0.625);
+$font-size-extra-small: calc(1.3rem * 0.625);
+$font-size-mini: calc(1rem * 0.625);
 
 // ############################################################################ SPACINGS ############################################################################ 
 
 // -------------------------- PADDINGS -------------------------- 
 
-$padding-supreme: 12rem;
-$padding-extra-large: 10rem;
-$padding-large: 8rem;
-$padding-medium: 4rem;
-$padding-regular: 3rem;
-$padding-small: 2rem;
-$padding-extra-small: 1.5rem;
-$padding-mini: 1rem;
+$padding-supreme: 120px;
+$padding-extra-large: 100px;
+$padding-large: 75px;
+$padding-medium: 50px;
+$padding-regular: 30px;
+$padding-small: 20px;
+$padding-extra-small: 15px;
+$padding-mini: 10px;
 $padding-none: 0;
 $padding-default: calc(var(--bs-gutter-x) * .5);
 
 // -------------------------- MARGINS -------------------------- 
 
-$margin-supreme: 12rem;
-$margin-extra-large: 10rem;
-$margin-large: 8rem;
-$margin-medium: 4rem;
-$margin-regular: 3rem;
-$margin-small: 2rem;
-$margin-extra-small: 1.5rem;
-$margin-mini: 1rem;
+$margin-supreme: 120px;
+$margin-extra-large: 100px;
+$margin-large: 75px;
+$margin-medium: 50px;
+$margin-regular: 30px;
+$margin-small: 20px;
+$margin-extra-small: 15px;
+$margin-mini: 10px;
 $margin-none: 0;
 
 // ############################################################################ COLORS ############################################################################ 

@@ -1,8 +1,7 @@
 // ############################################################################ NAVIGATION ############################################################################
 
 nav.site-navigation {
-  padding: $padding-small $padding-none;
-  background-color: $color-light-grey;
+  padding: 54px 0;
 
   .logo {
     display: flex;
@@ -14,12 +13,8 @@ nav.site-navigation {
       color: $dark-font-color;
       text-transform: uppercase;
 
-      > img {
-        height: 5rem;
-      }
-
       > .site-name {
-        font-size: 3rem;
+        @include fontSize(2.4rem);
       }
     }
   }
@@ -30,7 +25,8 @@ nav.site-navigation {
     justify-content: flex-end;
 
     .nav-menu {
-      padding: $padding-extra-small $padding-none;
+      display: flex;
+      align-items: center;
 
       // -------------------------- All MENU LEVELS --------------------------
       ul {
@@ -39,9 +35,12 @@ nav.site-navigation {
 
         li {
           display: inline-block;
+          padding: 15px 16px;
 
           a {
-            font-size: 18px;
+            font-size: 14px;
+            padding: 3px 0;
+            font-weight: 500;
             color: $dark-font-color;
             text-decoration: none;
           }
@@ -53,15 +52,13 @@ nav.site-navigation {
         text-align: right;
 
         > li {
-          padding-left: $padding-mini;
 
           > a {
-            border-bottom: 3px solid transparent;
-            padding: $padding-mini;
+            border-bottom: 1px solid transparent;
             @include transition(all, 0.2s);
 
             &:hover {
-              border-bottom: 3px solid $dark-font-color;
+              border-bottom: 1px solid #404040;
             }
           }
 
@@ -74,6 +71,11 @@ nav.site-navigation {
           &.menu-item-has-children {
           }
         }
+      }
+
+      .fa-instagram {
+        color: #404040;
+        padding-left: 16px;
       }
 
       // -------------------------- MENU LEVEL 2 --------------------------
@@ -101,8 +103,8 @@ nav.site-navigation {
       justify-content: flex-start;
 
       display: none;
-      width: 5rem;
-      height: 5rem;
+      width: 50px;
+      height: 50px;
       cursor: pointer;
 
       .toggler {

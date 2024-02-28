@@ -14,11 +14,11 @@ footer {
       text-transform: uppercase;
 
       > img {
-        height: 3rem;
+        height: 30px;
       }
 
       > .site-name {
-        font-size: 2rem;
+        @include fontSize(2rem);
       }
     }
   }

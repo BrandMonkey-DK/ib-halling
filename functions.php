@@ -170,6 +170,26 @@ function bm_register_custom_post_types()
   //     // 'menu_position'         => 5,
   //   )
   // );
+
+  register_post_type(
+    'flexible-sections',
+    array(
+      'labels' => array(
+        'name'                => __('Flexible sections'),
+        'singular_name'       => __('Flexible section'),
+        'add_new'             => __('Add section'),
+        'add_new_item'        => __('Add section')
+      ),
+      'label'                 => __('Flexible sections'),
+      'description'           => __('Create a reuseable section'),
+      'show_in_rest'          => false,
+      'supports'              => array('title', 'thumbnail'),
+      'menu_icon'             => 'dashicons-pressthis',
+      'public'                => true,
+      'publicly_queryable'    => true,
+      'has_archive'           => false,
+    )
+  );
 }
 add_action('init', 'bm_register_custom_post_types', 0);
 
@@ -208,12 +228,31 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
   // ---------------------------------------- GET BLOCKS ---------------------------------------- 
   function get_blocks($type = "content")
   {
-    if (have_posts()) : while (have_posts()) : the_post();
-        if (have_rows($type)) :
-          while (have_rows($type)) : the_row();
-            get_template_part('template-parts/blocks/block', get_row_layout());
-          endwhile;
-        endif;
+    // show to user in backend, that section has no content
+    if(is_admin()) {
+      if(!have_rows($type)) {
+        echo '<h1>No blocks added to this section yet.</h1>';
+      }
+    }
+    if (have_rows($type)) :
+      while (have_rows($type)) : the_row();
+        get_template_part('template-parts/blocks/block', get_row_layout());
+      endwhile;
+    endif;
+  }
+
+  // ---------------------------------------- GET BLOCKS FLEXIBLE ----------------------------------------
+  function get_blocks_flexible($type = "content", $id)
+  {
+    // show to user in backend, that section has no content
+    if(is_admin()) {
+      if(!have_rows($type, $id)) {
+        echo '<h1>No blocks added to this section yet.</h1>';
+      }
+    }
+    if (have_rows($type, $id)) :
+      while (have_rows($type, $id)) : the_row();
+        get_template_part('template-parts/blocks/block', get_row_layout(), ['parent_section_id' => $id]);
       endwhile;
     endif;
   }
@@ -227,49 +266,11 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
     }
   }
 
-  // ---------------------------------------- CUSTOM ACF BLOCKS ---------------------------------------- 
-  function bm_acf_init()
-  {
-    // Register Blocks
-    if (function_exists('acf_register_block')) {
-      acf_register_block(array(
-        'name' => 'header',
-        'title' => __('Header'),
-        'description' => __('Header displayed at the top of each page.'),
-        'render_callback'  => 'bm_get_sections_callback',
-        'category' => 'formatting',
-        'supports' => array('mode' => false, 'align' => false),
-        'icon' => 'format-image',
-        'mode' => 'edit',
-        'keywords' => array('header', 'content'),
-      ));
-
-      acf_register_block(array(
-        'name' => 'section',
-        'title' => __('Sektion'),
-        'description' => __('Content section that can contain different blocks'),
-        'render_callback' => 'bm_get_sections_callback',
-        'category' => 'common',
-        'supports' => array('mode' => false, 'align' => false),
-        'icon' => 'align-center',
-        'mode' => 'edit',
-        'keywords' => array('indhold', 'sektion', 'content')
-      ));
-
-      acf_register_block(array(
-        'name' => 'example-section',
-        'title' => __('Example Section'),
-        'description' => __('Example section'),
-        'render_callback' => 'bm_get_sections_callback',
-        'category' => 'common',
-        'supports' => array('mode' => false, 'align' => false),
-        'icon' => 'align-center',
-        'mode' => 'edit',
-        'keywords' => array('example')
-      ));
-    }
+  function bm_register_block_types() {
+    register_block_type( __DIR__ . '/blocks/section' );
+    register_block_type( __DIR__ . '/blocks/section-flexible' );
   }
-  add_action('acf/init', 'bm_acf_init');
+  add_action('init', 'bm_register_block_types');
 
   // ---------------------------------------- WORDPRESS GUTENBERG BLOCKS ---------------------------------------- 
   // Disable Default Gutenberg Blocks and allow only custom ACF blocks
@@ -277,9 +278,8 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
   {
     if (!empty($editor_context->post)) {
       return array(
-        'acf/header',
         'acf/section',
-        'acf/example-section',
+        'acf/section-flexible',
       );
     }
     return $block_editor_context;
@@ -302,7 +302,7 @@ add_action('wp_enqueue_scripts', 'remove_core_jquery_version');
 // Add jQuery Script
 function replace_core_jquery_version()
 {
-  wp_register_script('jquery', "https://code.jquery.com/jquery-3.6.0.min.js", array(), null, true);
+  wp_register_script('jquery', "https://code.jquery.com/jquery-3.7.1.min.js", array(), null, true);
 }
 add_action('wp_footer', 'replace_core_jquery_version');
 
@@ -310,8 +310,9 @@ add_action('wp_footer', 'replace_core_jquery_version');
 // ---------------------------------------- SCRIPTS ---------------------------------------- 
 function bm_enqueue_scripts()
 {
-  // wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', array('jquery'), '3.9.1', true);
-  wp_enqueue_script('bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array(), '5.1.3', true);
+  // wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js', array('jquery'), '3.12.2', true);
+  wp_enqueue_script('bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js', array(), '5.3.2', true);
+  wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/d66391e1b7.js', array(), null, false);
   bm_enqueue_asset('js', 'script', '/assets/js/script.min.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'bm_enqueue_scripts');
@@ -319,19 +320,42 @@ add_action('wp_enqueue_scripts', 'bm_enqueue_scripts');
 // ---------------------------------------- STYLESHEETS ---------------------------------------- 
 function bm_enqueue_stylesheets()
 {
-  wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), false, 'all');
+  wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css', array(), false, 'all');
+  wp_enqueue_style('greycliff-cf', 'https://use.typekit.net/vus7udr.css');
+  wp_enqueue_style('argent-cf', 'https://use.typekit.net/vus7udr.css');
   bm_enqueue_asset('css', 'style', '/assets/css/style.min.css', array('bootstrap'));
 }
 add_action('wp_enqueue_scripts', 'bm_enqueue_stylesheets');
 
+// enqueue styles in admin, but only when editing a page
+add_action( 'current_screen', 'enqueue_styles_on_edit_page' );
+function enqueue_styles_on_edit_page() {
+    $currentScreen = get_current_screen();
+    if( $currentScreen->id === "page" ) {
+      add_action('admin_enqueue_scripts', 'bm_enqueue_stylesheets', 1);
+    }
+}
+
 /**
  * Register and enqueue a custom stylesheet in the WordPress admin.
  */
-function bm_enqueue_custom_admin_style() {
-  wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/assets/css/admin.css', false, '1.0.0' );
-  wp_enqueue_style( 'custom_wp_admin_css' );
+function bm_enqueue_custom_admin_style()
+{
+  wp_register_style('custom_wp_admin_css', get_template_directory_uri() . '/assets/css/admin.css', false, '1.0.0');
+  wp_enqueue_style('custom_wp_admin_css');
+  wp_register_style('custom_wp_paddings_backend_css', get_template_directory_uri() . '/assets/css/paddings-backend.css', false, '1.0.0');
+  wp_enqueue_style('custom_wp_paddings_backend_css');
 }
-add_action( 'admin_enqueue_scripts', 'bm_enqueue_custom_admin_style' );
+add_action('admin_enqueue_scripts', 'bm_enqueue_custom_admin_style');
+
+/**
+ * Register and enqueue a custom scripts in the WordPress admin.
+ */
+function bm_enqueue_custom_admin_script()
+{
+  bm_enqueue_asset('js', 'backend-editor', '/assets/js/backend-editor.min.js', array('jquery'));
+}
+add_action('admin_enqueue_scripts', 'bm_enqueue_custom_admin_script');
 
 
 

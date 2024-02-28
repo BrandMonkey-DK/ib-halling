@@ -8,54 +8,56 @@
 }
 
 html {
-  font-size: 10px;
+  font-size: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  font-weight: $font-weight-regular;
-  line-height: 2.4rem;
+  font-family: "greycliff-cf", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  @include fontSize(1.6rem);
+  line-height: 1.5;
 }
 
 h1 {
   font-family: "Open Sans", sans-serif;
-  font-size: 4rem;
+  @include fontSize(4rem);
   font-weight: $font-weight-bold;
-  line-height: 5.4rem;
+  line-height: 1.5;
 }
 
 h2 {
   font-family: "Open Sans", sans-serif;
-  font-size: 3.4rem;
+  @include fontSize(3.4rem);
   font-weight: $font-weight-bold;
-  line-height: 4.6rem;
+  line-height: 1.5;
 }
 
 h3 {
   font-family: "Open Sans", sans-serif;
-  font-size: 2.8rem;
+  @include fontSize(2.8rem);
   font-weight: $font-weight-bold;
-  line-height: 3.6rem;
+  line-height: 1.5;
 }
 
 h4 {
   font-family: "Open Sans", sans-serif;
-  font-size: 2.2rem;
+  @include fontSize(2.2rem);
   font-weight: $font-weight-semi-bold;
-  line-height: 3rem;
+  line-height: 1.5;
 }
 
 h5 {
 }
 
 p {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  font-weight: $font-weight-regular;
-  line-height: 2.4rem;
+  font-family: "greycliff-cf", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  @include fontSize(1.6rem);
+  line-height: 1.5;
 }
 
 a {
@@ -70,4 +72,55 @@ ul,
 ol {
   li {
   }
+}
+
+.container-fluid-grid {
+
+  .row {
+    margin: 0;
+  }
+
+  .fluid-split-section-item {
+
+    @include breakpoint(lg) {
+      width: 100%!important;
+    }
+
+    &.left {
+
+        .fluid-content-wrapper {
+            margin-left: auto;
+            padding-left: calc(var(--bs-gutter-x) * .5);
+
+            @include breakpoint(lg) {
+              padding-left: 0;
+            }
+        }
+    }
+
+    &.right {
+
+      .fluid-content-wrapper {
+          margin-right: auto;
+          padding-right: calc(var(--bs-gutter-x) * .5);
+
+          @include breakpoint(lg) {
+            padding-right: 0;
+          }
+      }
+  }
+
+    .fluid-content-wrapper {
+
+      @include breakpoint(lg) {
+        width: 100%!important;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 72px;
+  margin: 0;
 }

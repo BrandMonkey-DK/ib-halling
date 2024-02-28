@@ -40,6 +40,9 @@
               )
             );
             ?>
+            <a href="https://www.instagram.com/ib_halling_fotografi/" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
           </div>
           <div class="hamburger">
             <span class="toggler">
