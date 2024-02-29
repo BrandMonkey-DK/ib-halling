@@ -48,8 +48,20 @@ $(document).ready(function () {
     fluidResizer();
   };
 
-  // -----------------------------------------------------------------
-  // -----------------------------------------------------------------
-  // -----------------------------------------------------------------
+  // Nav modal - "Fotografering"
+  menuModal = $('.menu-modal');
+  closeModal = $('.close-modal');
+  modal = $('.modal');
 
+  menuModal.on("click", function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+
+    modal.addClass("open");
+  });
+
+  closeModal.on("click", function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+
+    modal.removeClass("open");
+  });
 });

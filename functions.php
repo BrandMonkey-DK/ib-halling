@@ -37,10 +37,10 @@ add_action('after_setup_theme', 'bm_theme_setup', 10);
 function bm_remove_admin_menus()
 {
   // remove_menu_page('index.php');                  //Dashboard
-  // remove_menu_page('edit.php');                   //Posts
+  remove_menu_page('edit.php');                   //Posts
   // remove_menu_page('upload.php');                 //Media
   // remove_menu_page('edit.php?post_type=page');    //Pages
-  // remove_menu_page('edit-comments.php');          //Comments
+  remove_menu_page('edit-comments.php');          //Comments
   // remove_menu_page('themes.php');                 //Appearance
   // remove_menu_page('plugins.php');                //Plugins
   // remove_menu_page('users.php');                  //Users
@@ -185,6 +185,26 @@ function bm_register_custom_post_types()
       'show_in_rest'          => false,
       'supports'              => array('title', 'thumbnail'),
       'menu_icon'             => 'dashicons-pressthis',
+      'public'                => true,
+      'publicly_queryable'    => true,
+      'has_archive'           => false,
+    )
+  );
+
+  register_post_type(
+    'fotografering',
+    array(
+      'labels' => array(
+        'name'                => __('Fotografering'),
+        'singular_name'       => __('Fotografering'),
+        'add_new'             => __('Tilføj ny type af fotografering'),
+        'add_new_item'        => __('Tilføj ny type af fotografering')
+      ),
+      'label'                 => __('Fotografering'),
+      'description'           => __('Fotografering'),
+      'show_in_rest'          => false,
+      'supports'              => array('title'),
+      'menu_icon'             => 'dashicons-camera',
       'public'                => true,
       'publicly_queryable'    => true,
       'has_archive'           => false,

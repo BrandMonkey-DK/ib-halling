@@ -44,6 +44,19 @@
               <i class="fa-brands fa-instagram"></i>
             </a>
           </div>
+          <div class="modal">
+            <div class="row">
+              <?php
+              wp_nav_menu(
+                array(
+                  'menu' => 'Fotografering',
+                  'container' => 'ul',
+                  'menu_class' => 'fotografering-nav',
+                )
+              );
+              ?>
+            </div>
+          </div>
           <div class="hamburger">
             <span class="toggler">
               <span class="bar"></span>
