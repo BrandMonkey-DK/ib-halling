@@ -270,6 +270,7 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
     register_block_type( __DIR__ . '/blocks/section' );
     register_block_type( __DIR__ . '/blocks/section-flexible' );
     register_block_type( __DIR__ . '/blocks/header' );
+    register_block_type( __DIR__ . '/blocks/contact' );
   }
   add_action('init', 'bm_register_block_types');
 
@@ -281,7 +282,8 @@ if (bm_is_plugin_active('advanced-custom-fields-pro/acf.php')) {
       return array(
         'acf/section',
         'acf/section-flexible',
-        'acf/header'
+        'acf/header',
+        'acf/contact'
       );
     }
     return $block_editor_context;

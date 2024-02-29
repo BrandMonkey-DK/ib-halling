@@ -1,0 +1,19 @@
+.content-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    a {
+        text-transform: uppercase;
+        @include fontSize(1.4rem);
+        letter-spacing: 1.2px;
+        color: #343434;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #343434;
+        font-weight: 600;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

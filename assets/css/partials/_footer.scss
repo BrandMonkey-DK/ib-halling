@@ -1,7 +1,8 @@
 // ############################################################################ FOOTER ############################################################################
 
 footer {
-  border-top: 1px solid $color-light-grey;
+  padding-top: 145px;
+  padding-bottom: 72px;
 
   .contact-info {
     display: flex;
@@ -14,6 +15,13 @@ footer {
       opacity: 0.85;
       @include fontSize(2rem);
       margin-bottom: 6px;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.2s ease; 
+
+      &:hover {
+          border-bottom: 1px solid rgba(64, 64, 64, 0.85);
+          text-decoration: none;
+      }
 
       &:last-of-type {
         margin-bottom: 0;

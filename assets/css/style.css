@@ -2776,10 +2776,9 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "greycliff-cf", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
   line-height: 1.5;
   color: #404040;
 }
@@ -2816,7 +2815,7 @@ p {
   font-family: "greycliff-cf", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.5;
 }
 
@@ -2885,6 +2884,10 @@ a:hover {
   margin: 0;
 }
 
+img {
+  border-radius: 5px;
+}
+
 nav.site-navigation {
   padding: 54px 0;
 }
@@ -2900,6 +2903,8 @@ nav.site-navigation .logo > a {
 }
 nav.site-navigation .logo > a > .site-name {
   font-size: 1.5rem;
+  font-family: "greycliff-cf", sans-serif;
+  text-transform: none;
 }
 nav.site-navigation .navigation {
   display: flex;
@@ -2921,9 +2926,12 @@ nav.site-navigation .navigation .nav-menu ul li {
 nav.site-navigation .navigation .nav-menu ul li a {
   font-size: 14px;
   padding: 3px 0;
-  font-weight: 500;
-  color: rgb(0, 0, 0);
+  color: #404040;
   text-decoration: none;
+  font-family: "greycliff-cf", sans-serif;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 nav.site-navigation .navigation .nav-menu > ul {
   text-align: right;
@@ -2942,6 +2950,7 @@ nav.site-navigation .navigation .nav-menu > ul > li > a:hover {
 nav.site-navigation .navigation .nav-menu .fa-instagram {
   color: #404040;
   padding-left: 16px;
+  font-size: 1.5625rem;
 }
 nav.site-navigation .navigation .nav-menu > ul > li > ul.sub-menu {
   display: none;
@@ -3039,6 +3048,7 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 .header .container .row .right {
   position: relative;
@@ -3050,6 +3060,7 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
 }
 .header .container .row .header-title {
   font-weight: bold;
@@ -3065,8 +3076,140 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   text-align: center;
 }
 
+.content-block {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.content-block a {
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 1.2px;
+  color: #343434;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #343434;
+  font-weight: 600;
+}
+.content-block a:hover {
+  text-decoration: none;
+}
+
+.contact .container .row {
+  display: flex;
+  justify-content: center;
+}
+.contact .container .row .portrait {
+  width: 20%;
+}
+.contact .container .row .portrait .portrait-img {
+  width: 300px;
+  height: 300px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 100%;
+}
+.contact .container .row .contact-info {
+  font-size: 20px;
+  margin-top: 32px;
+}
+.contact .container .row .contact-info .title {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.contact .container .row .contact-info .address {
+  max-width: 195px;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+.contact .container .row .contact-info .phone {
+  opacity: 0.85;
+}
+.contact .container .row .contact-info .phone a {
+  color: #404040;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.contact .container .row .contact-info .phone a:hover {
+  border-bottom: 1px solid rgba(64, 64, 64, 0.85);
+  text-decoration: none;
+}
+.contact .container .row .contact-info .mail {
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+.contact .container .row .contact-info .mail a {
+  color: #404040;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+.contact .container .row .contact-info .mail a:hover {
+  border-bottom: 1px solid rgba(64, 64, 64, 0.85);
+  text-decoration: none;
+}
+.contact .container .row .contact-info .socials a {
+  margin: 0 0.5rem;
+}
+.contact .container .row .contact-info .socials a:first-of-type {
+  margin-left: 0;
+}
+.contact .container .row .contact-info .socials a:last-of-type {
+  margin-right: 0;
+}
+.contact .container .row .contact-info .socials a:hover {
+  text-decoration: none;
+}
+.contact .container .row .contact-info .socials a .fa-brands {
+  font-size: 1.5625rem;
+  color: #404040;
+}
+.contact .container .row .contact-formular {
+  display: flex;
+  justify-content: end;
+  margin-top: 32px;
+}
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap input,
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap textarea {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid rgba(52, 52, 52, 0.1);
+  padding: 8px 0;
+  margin-bottom: 8px;
+  transition: border-bottom 0.2s ease;
+}
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap input:focus-visible,
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap textarea:focus-visible {
+  outline: none;
+  border-bottom: 1px solid rgb(52, 52, 52);
+}
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap textarea {
+  height: 84px;
+  padding-top: 8px;
+  margin: 0;
+}
+.contact .container .row .contact-formular .wpcf7 form .wpcf7-submit {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 16px 55px;
+  color: #fff;
+  background: #343434;
+  border-radius: 5px;
+  border: none;
+  margin-top: 32px;
+  letter-spacing: 1px;
+}
+.contact .container .row .contact-formular .wpcf7 form p {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+}
+
 footer {
-  border-top: 1px solid rgb(235, 235, 235);
+  padding-top: 145px;
+  padding-bottom: 72px;
 }
 footer .contact-info {
   display: flex;
@@ -3079,6 +3222,12 @@ footer .contact-info > a {
   opacity: 0.85;
   font-size: 1.25rem;
   margin-bottom: 6px;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+footer .contact-info > a:hover {
+  border-bottom: 1px solid rgba(64, 64, 64, 0.85);
+  text-decoration: none;
 }
 footer .contact-info > a:last-of-type {
   margin-bottom: 0;

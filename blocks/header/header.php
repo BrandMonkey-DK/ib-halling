@@ -18,10 +18,10 @@ $header_title = get_field('header_title');
   <div class="container">
     <div class="row">
       <div class="col-6 left p-0">
-        <img src="<?= $header_left_image_url; ?>" alt="">
+        <img class="left-img" src="<?= $header_left_image_url; ?>" alt="">
       </div>
       <div class="col-6 right p-0">
-        <img src="<?= $header_right_image_url; ?>" alt="">
+        <img class="right-img" src="<?= $header_right_image_url; ?>" alt="">
       </div>
       <div class="header-title">
         <?= $header_title; ?>

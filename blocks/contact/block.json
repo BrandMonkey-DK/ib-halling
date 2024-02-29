@@ -1,0 +1,20 @@
+{
+  "name": "acf/contact",
+  "title": "Contact",
+  "description": "Contact.",
+  "category": "widget",
+  "icon": "phone",
+  "keywords": [ "contact" ],
+  "supports": {
+      "align": false,
+      "color": {
+          "background": false,
+          "text": false
+      }
+  },
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "contact.php"
+  },
+  "textdomain": "brandmonkey-base-theme"
+}
