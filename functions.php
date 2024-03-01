@@ -23,7 +23,10 @@ function bm_theme_setup()
   ));
 
   // Image Sizes
+  add_image_size('large-image-square', 1184, 833, true);
   add_image_size('large-image-square', 800, 800, true);
+  add_image_size('single-image-section', 888, 744, true);
+  add_image_size('second-image-section', 888, 649, true);
   add_image_size('medium-image-square', 600, 600, true);
   add_image_size('small-image-square', 300, 300, true);
   add_image_size('large-icon-square', 150, 150, true);

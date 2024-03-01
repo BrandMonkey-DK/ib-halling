@@ -24,7 +24,7 @@ $header_title = get_field('header_title');
         <img class="right-img" src="<?= $header_right_image_url; ?>" alt="">
       </div>
       <div class="header-title">
-        <?= $header_title; ?>
+        <h1><?= $header_title; ?></h1>
       </div>
     </div>
   </div>

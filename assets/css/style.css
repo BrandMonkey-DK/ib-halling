@@ -2965,29 +2965,47 @@ nav.site-navigation .navigation .modal {
   z-index: -1;
   transition: all 0.3s ease;
 }
-nav.site-navigation .navigation .modal .row {
+nav.site-navigation .navigation .modal .modal-nav {
+  display: flex;
+  padding: 54px 72px;
+  position: absolute;
+  width: 100%;
+  z-index: 9999999;
+}
+nav.site-navigation .navigation .modal .modal-nav-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: auto;
+  height: 100%;
 }
-nav.site-navigation .navigation .modal .row .fotografering-nav {
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row .fotografering-nav {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   height: 432px;
   width: 1036px;
 }
-nav.site-navigation .navigation .modal .row .fotografering-nav li {
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row .fotografering-nav li {
   list-style-type: none;
 }
-nav.site-navigation .navigation .modal .row .fotografering-nav li a {
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row .fotografering-nav li.current-menu-item a {
+  color: rgb(64, 64, 64);
+}
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row .fotografering-nav li a {
   color: rgba(64, 64, 64, 0.15);
   font-size: 48px;
   font-weight: 300;
   transition: color 0.3s ease;
 }
-nav.site-navigation .navigation .modal .row .fotografering-nav li a:hover {
+nav.site-navigation .navigation .modal .modal-nav-wrapper .row .fotografering-nav li a:hover {
   text-decoration: none;
   color: rgb(64, 64, 64);
 }
@@ -3217,6 +3235,7 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   padding: 8px 0;
   margin-bottom: 8px;
   transition: border-bottom 0.2s ease;
+  background: #fcfbf9;
 }
 .contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap input:focus-visible,
 .contact .container .row .contact-formular .wpcf7 form .wpcf7-form-control-wrap textarea:focus-visible {
@@ -3245,6 +3264,147 @@ nav.site-navigation .navigation .hamburger.is-active .toggler .bar:last-of-type 
   justify-content: end;
   align-items: end;
   flex-direction: column;
+}
+
+.photography .container.header .row .title {
+  font-family: "argent-cf", sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-top: 105px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.photography .container.header .row .text {
+  font-family: "greycliff-cf", sans-serif;
+  font-weight: 300;
+  font-size: 1.625rem;
+  max-width: 888px;
+  text-align: center;
+  margin: auto;
+}
+.photography .container.header .row .arrow-down {
+  text-align: center;
+}
+.photography .container.header .row .arrow-down img {
+  padding-top: 250px;
+}
+.photography .container.image-section {
+  padding: 0;
+  margin: 48px 24px 0;
+  background-color: #F3F0EA;
+  width: auto;
+}
+.photography .container.image-section .row .image-section-wrapper {
+  display: flex;
+  align-items: center;
+}
+.photography .container.image-section .row .image-section-wrapper .image {
+  margin: 144px 0 144px 48px;
+}
+.photography .container.image-section .row .image-section-wrapper .image img {
+  max-width: 100%;
+}
+.photography .container.image-section .row .image-section-wrapper .col-6.text {
+  max-width: 592px;
+  margin: auto;
+}
+.photography .container.image-section .row .image-section-wrapper .col-6.text .title {
+  font-family: "argent-cf", sans-serif;
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 54px;
+  line-height: 1.2;
+}
+.photography .container.image-section .row .image-section-wrapper .col-6.text .desc {
+  margin-bottom: 48px;
+}
+.photography .container.image-section .row .image-section-wrapper .col-6.text .button-link {
+  display: inline-flex;
+  background: #343434;
+  text-transform: uppercase;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.photography .container.prices-container {
+  margin-top: 144px;
+}
+.photography .container.prices-container .row .prices-wrapper .title h2 {
+  font-family: "argent-cf", sans-serif;
+  font-size: 4.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 97px;
+}
+.photography .container.prices-container .row .prices-wrapper .prices {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1480px;
+  margin: auto;
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price {
+  text-align: center;
+  padding: 53px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price:nth-child(3n) {
+  border-right: 0;
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price:nth-last-child(-n+3) {
+  border-bottom: 0;
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price .title {
+  font-family: "argent-cf", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price .desc {
+  margin: 0 auto 34px;
+  max-width: 412px;
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.photography .container.prices-container .row .prices-wrapper .prices .price .single-price {
+  font-family: "argent-cf", sans-serif;
+  font-size: 1.5rem;
+}
+.photography .container.second-image-section {
+  margin-top: 144px;
+}
+.photography .container.second-image-section .row .wrapper {
+  display: flex;
+  align-items: center;
+}
+.photography .container.second-image-section .row .wrapper .desc {
+  max-width: 444px;
+  margin: auto;
+}
+.photography .container.second-image-section .row .wrapper .desc h5 {
+  font-family: "greycliff-cf", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.photography .container.second-image-section .row .wrapper .desc .text {
+  font-family: "greycliff-cf", sans-serif;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+.photography .container.second-image-section .row .wrapper .image img {
+  width: 100%;
+}
+.photography .container.second-image-section .row .full-size-image {
+  margin-top: 144px;
+}
+.photography .container.second-image-section .row .full-size-image img {
+  display: flex;
+  margin: auto;
+  max-width: 1184px;
+  width: 100%;
 }
 
 footer {

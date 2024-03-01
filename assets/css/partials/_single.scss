@@ -1,0 +1,191 @@
+.photography {
+    .container {
+
+        &.header {
+            .row {
+                .title {
+                    font-family: 'argent-cf', sans-serif;
+                    @include fontSize(7.2rem);
+                    font-weight: bold;
+                    margin-top: 105px;
+                    margin-bottom: 50px;
+                    text-align: center;
+                }
+    
+                .text {
+                    font-family: 'greycliff-cf', sans-serif;
+                    font-weight: 300;
+                    @include fontSize(2.6rem);
+                    max-width: 888px;
+                    text-align: center;
+                    margin: auto;
+                }
+    
+                .arrow-down {
+                    text-align: center;
+    
+                    img {
+                        padding-top: 250px;
+                    }
+                }
+            }
+        }
+
+        &.image-section {
+            padding: 0;
+            margin: 48px 24px 0;
+            background-color: #F3F0EA;
+            width: auto;
+
+            .row {
+                .image-section-wrapper {
+                    display: flex;
+                    align-items: center;
+    
+                    .image {
+                        margin: 144px 0 144px 48px;
+
+                        img {
+                            max-width: 100%;
+                        }
+                    }
+    
+                    .col-6 {
+                        &.text {
+                            max-width: 592px;
+                            margin: auto;
+
+                            .title {
+                                font-family: 'argent-cf', sans-serif;
+                                @include fontSize(6rem);
+                                font-weight: bold;
+                                margin-bottom: 54px;
+                                line-height: 1.2;
+                            }
+
+                            .desc {
+                                margin-bottom: 48px;
+                            }
+
+                            .button-link {
+                                display: inline-flex;
+                                background: #343434;
+                                text-transform: uppercase;
+                                color: white;
+                                padding: 16px 48px;
+                                border-radius: 5px;
+                                font-size: 14px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.prices-container {
+            margin-top: 144px;
+
+            .row {
+                .prices-wrapper {
+                    .title {
+                        h2 {
+                            font-family: 'argent-cf', sans-serif;
+                            @include fontSize(7.2rem);
+                            font-weight: bold;
+                            text-align: center;
+                            margin-bottom: 97px;
+                        }
+                    }
+
+                    .prices {
+                        display: flex;
+                        flex-wrap: wrap;
+                        max-width: 1480px;
+                        margin: auto;
+
+                        .price {
+                            text-align: center;
+                            padding: 53px;
+                            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                            border-right: 1px solid rgba(0, 0, 0,.1);
+
+                            &:nth-child(3n) {
+                                border-right: 0;
+                            }
+
+                            &:nth-last-child(-n+3) {
+                                border-bottom: 0;
+                            }
+
+                            .title {
+                                font-family: 'argent-cf', sans-serif;
+                                font-weight: bold;
+                                @include fontSize(2.4rem);
+                                margin-bottom: 32px;
+                            }
+
+                            .desc {
+                                margin: 0 auto 34px;
+                                max-width: 412px;
+                                @include fontSize(2rem);
+                                font-weight: 300;
+                            }
+
+                            .single-price {
+                                font-family: 'argent-cf', sans-serif;
+                                @include fontSize(2.4rem);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.second-image-section {
+            margin-top: 144px;
+
+            .row {
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+
+                    .desc {
+                        max-width: 444px;
+                        margin: auto;
+
+                        h5 {
+                            font-family: 'greycliff-cf', sans-serif;
+                            font-weight: bold;
+                            @include fontSize(2rem);
+                        }
+
+                        .text {
+                            font-family: 'greycliff-cf', sans-serif;
+                            font-weight: 300;
+                            @include fontSize(2rem);
+                        }
+                    }
+
+                    .image {
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .full-size-image {
+                    margin-top: 144px;
+
+                    img {
+                        display: flex;
+                        margin: auto;
+                        max-width: 1184px;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

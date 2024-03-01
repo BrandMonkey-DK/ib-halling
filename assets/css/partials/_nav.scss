@@ -113,31 +113,54 @@ nav.site-navigation {
       z-index: -1;
       transition: all 0.3s ease;
 
-      .row {
+      .modal-nav {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
+        padding: 54px 72px;
+        position: absolute;
+        width: 100%;
+        z-index: 9999999;
+      }
 
-        .fotografering-nav {
+      .modal-nav-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        .row {
           display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          height: 432px;
-          width: 1036px;
+          justify-content: center;
+          align-items: center;
+          margin: auto;
+          height: 100%;
 
-          li {
-            list-style-type: none;
+          .fotografering-nav {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 432px;
+            width: 1036px;
 
-            a {
-              color: rgba(64, 64, 64, 0.15);
-              font-size: 48px;
-              font-weight: 300;
-              transition: color 0.3s ease;
+            li {
+              list-style-type: none;
 
-              &:hover {
-                text-decoration: none;
-                color: rgba(64, 64, 64, 1);
+              &.current-menu-item {
+                a {
+                  color: rgba(64, 64, 64, 1);
+                }
+              }
+
+              a {
+                color: rgba(64, 64, 64, 0.15);
+                font-size: 48px;
+                font-weight: 300;
+                transition: color 0.3s ease;
+
+                &:hover {
+                  text-decoration: none;
+                  color: rgba(64, 64, 64, 1);
+                }
               }
             }
           }

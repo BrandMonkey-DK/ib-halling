@@ -52,6 +52,8 @@ $(document).ready(function () {
   menuModal = $('.menu-modal');
   closeModal = $('.close-modal');
   modal = $('.modal');
+  navInModal = $('#menu-fotografering');
+  modalNav = $('.modal-nav');
 
   menuModal.on("click", function(e) {
     e.preventDefault(); // Prevent the default action of the link
@@ -60,6 +62,22 @@ $(document).ready(function () {
   });
 
   closeModal.on("click", function(e) {
+    e.preventDefault(); // Prevent the default action of the link
+
+    modal.removeClass("open");
+  });
+
+  // Event listener for clicks inside the modal content
+  navInModal.on('click', function(e) {
+    e.stopPropagation(); // Prevent event bubbling
+  });
+
+  // Event listener for clicks on the modal nav
+  modalNav.on('click', function(e) {
+    e.stopPropagation(); // Prevent event bubbling
+  });
+  
+  modal.on('click', function(e) {
     e.preventDefault(); // Prevent the default action of the link
 
     modal.removeClass("open");
